@@ -1,0 +1,7 @@
+draw_date,prize_group,position,raw_value,normalized_value,last_two_digits
+2026-07-10,special,1,12345,12345,45
+2026-07-10,first,1,23456,23456,56
+2026-07-11,special,1,54321,54321,21
+2026-07-11,first,1,11145,11145,45
+2026-07-12,special,1,99999,99999,99
+2026-07-12,first,1,88845,88845,45

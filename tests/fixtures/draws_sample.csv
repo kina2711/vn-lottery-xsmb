@@ -1,0 +1,4 @@
+draw_date,region,source_name,source_url,collected_at,validation_status,validation_messages,content_hash
+2026-07-10,mien-bac,fixture,https://example.test/2026-07-10,2026-07-10T12:00:00+00:00,accepted,,h1
+2026-07-11,mien-bac,fixture,https://example.test/2026-07-11,2026-07-11T12:00:00+00:00,accepted,,h2
+2026-07-12,mien-bac,fixture,https://example.test/2026-07-12,2026-07-12T12:00:00+00:00,accepted,,h3
