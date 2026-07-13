@@ -29,11 +29,16 @@ class LotteryHtmlParser:
         return self._parse_minh_ngoc_text(soup)
 
     def _parse_data_attribute_fixture(self, root: Tag) -> RawDraw:
-        draw_date = date.fromisoformat(root["data-date"])
-        region = root.get("data-region", "mien-bac")
+        date_text = root.get("data-date")
+        if not isinstance(date_text, str):
+            raise ValueError("data-date must be a string attribute")
+        draw_date = date.fromisoformat(date_text)
+        region_text = root.get("data-region")
+        region = region_text.strip() if isinstance(region_text, str) and region_text.strip() else "mien-bac"
         prizes: list[RawPrize] = []
         for row in root.select("[data-prize]"):
-            group = row.get("data-prize", "").strip()
+            group_text = row.get("data-prize")
+            group = group_text.strip() if isinstance(group_text, str) else ""
             cells = [cell.get_text(" ", strip=True) for cell in row.find_all(["td", "th"])]
             text = " ".join(cells[1:] if len(cells) > 1 else cells)
             values = re.findall(r"\d+", text)
