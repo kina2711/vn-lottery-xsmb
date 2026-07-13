@@ -10,5 +10,5 @@ def test_build_dashboard_html() -> None:
     )
 
     content = output.read_text(encoding="utf-8")
-    assert "Northern Lottery Dashboard" in content
-    assert "Frequency" in content
+    assert "XSMB Dashboard" in content
+    assert "plotly-graph-div" in content

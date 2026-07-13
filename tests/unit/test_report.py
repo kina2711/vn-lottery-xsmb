@@ -12,4 +12,4 @@ def test_build_markdown_report() -> None:
 
     content = output.read_text(encoding="utf-8")
     assert "# Test Report" in content
-    assert "Top Frequency" in content
+    assert "Top tần suất" in content

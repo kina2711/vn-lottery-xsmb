@@ -22,19 +22,19 @@ def build_dashboard(metrics_dir: Path, output_path: Path) -> Path:
     recency = _read_csv(metrics_dir / "days_since_last_seen.csv")
     figures = []
     if not frequency.empty:
-        figures.append(px.bar(frequency.head(30), x="number", y="count", title="Frequency"))
+        figures.append(px.bar(frequency.head(30), x="number", y="count", title="Tần suất"))
     if not monthly.empty:
-        figures.append(px.bar(monthly, x="number", y="count", color="month", title="Monthly Distribution"))
+        figures.append(px.bar(monthly, x="number", y="count", color="month", title="Phân bố theo tháng"))
     if not rolling.empty:
-        figures.append(px.line(rolling, x="draw_date", y="rolling_count", color="number", title="Rolling Frequency"))
+        figures.append(px.line(rolling, x="draw_date", y="rolling_count", color="number", title="Tần suất cuốn chiếu"))
     if not heatmap.empty:
-        figures.append(px.imshow(heatmap.set_index("number"), aspect="auto", title="Heatmap"))
+        figures.append(px.imshow(heatmap.set_index("number"), aspect="auto", title="Bản đồ nhiệt"))
     if not histogram.empty:
-        figures.append(px.bar(histogram, x="count", y="number_total", title="Histogram"))
+        figures.append(px.bar(histogram, x="count", y="number_total", title="Biểu đồ phân phối"))
     if not moving.empty:
-        figures.append(px.line(moving, x="draw_date", y="moving_average", color="number", title="Moving Average"))
+        figures.append(px.line(moving, x="draw_date", y="moving_average", color="number", title="Trung bình động"))
     if not recency.empty:
-        figures.append(px.bar(recency, x="number", y="days_since", title="Days Since Last Seen"))
+        figures.append(px.bar(recency, x="number", y="days_since", title="Số ngày chưa xuất hiện"))
     body = "\n".join(to_html(figure, full_html=False, include_plotlyjs="cdn") for figure in figures)
     output_path.write_text(
         f"""<!doctype html>
