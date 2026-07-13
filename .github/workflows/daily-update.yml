@@ -24,11 +24,11 @@ jobs:
         run: python -m pytest
       - name: Run daily pipeline
         env:
-          VN_LOTTERY_SOURCE_NAME: ${{ vars.VN_LOTTERY_SOURCE_NAME || 'minh-ngoc' }}
-          VN_LOTTERY_BASE_URL: ${{ vars.VN_LOTTERY_BASE_URL || 'https://www.minhngoc.net.vn/ket-qua-xo-so/mien-bac/{date_dmy}.html' }}
-          VN_LOTTERY_REQUEST_TIMEOUT_SECONDS: ${{ vars.VN_LOTTERY_REQUEST_TIMEOUT_SECONDS || '15' }}
-          VN_LOTTERY_RETRY_ATTEMPTS: ${{ vars.VN_LOTTERY_RETRY_ATTEMPTS || '3' }}
-          VN_LOTTERY_ROLLING_WINDOW_DAYS: ${{ vars.VN_LOTTERY_ROLLING_WINDOW_DAYS || '30' }}
+          VN_LOTTERY_SOURCE_NAME: ${{ vars.VN_LOTTERY_SOURCE_NAME}}
+          VN_LOTTERY_BASE_URL: ${{ vars.VN_LOTTERY_BASE_URL}}
+          VN_LOTTERY_REQUEST_TIMEOUT_SECONDS: ${{ vars.VN_LOTTERY_REQUEST_TIMEOUT_SECONDS}}
+          VN_LOTTERY_RETRY_ATTEMPTS: ${{ vars.VN_LOTTERY_RETRY_ATTEMPTS}}
+          VN_LOTTERY_ROLLING_WINDOW_DAYS: ${{ vars.VN_LOTTERY_ROLLING_WINDOW_DAYS}}
         run: vn-lottery run-daily
       - name: Commit and Push README Update
         run: |
