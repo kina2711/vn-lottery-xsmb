@@ -1,26 +1,36 @@
-# Northern Lottery Report
+# Báo cáo XSMB
 
-## Dataset Summary
-
-Generated from metric CSV artifacts.
-
-## Top Frequency
+## Top tần suất
 
 | number | count |
 | --- | --- |
-| 45 | 3 |
-| 21 | 1 |
-| 56 | 1 |
-| 99 | 1 |
+| 13 | 5 |
+| 19 | 5 |
+| 64 | 5 |
+| 0 | 4 |
+| 5 | 4 |
+| 20 | 4 |
+| 31 | 4 |
+| 40 | 4 |
+| 50 | 4 |
+| 73 | 4 |
 
-## Days Since Last Seen
+## Gan số
 
 | number | last_seen | days_since |
 | --- | --- | --- |
-| 45 | 2026-07-12 | 0 |
-| 56 | 2026-07-10 | 2 |
+| 0 | 2026-07-14 | 0 |
+| 1 | 2026-07-14 | 0 |
+| 2 | 2026-07-14 | 0 |
+| 3 | 2026-07-14 | 0 |
+| 5 | 2026-07-14 | 0 |
+| 6 | 2026-07-14 | 0 |
+| 7 | 2026-07-14 | 0 |
+| 8 | 2026-07-14 | 0 |
+| 9 | 2026-07-14 | 0 |
+| 10 | 2026-07-14 | 0 |
 
-## Assets
+## Liên kết
 
 - [Dashboard](index.html)
-- Static charts are in `assets/`.
+- Biểu đồ tĩnh nằm trong `assets/`.
