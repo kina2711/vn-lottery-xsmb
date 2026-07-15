@@ -1,2 +1,3 @@
 draw_date,region,source_name,source_url,collected_at,validation_status,validation_messages,content_hash
 2026-07-14,mien-bac,minh-ngoc,https://www.minhngoc.net.vn/ket-qua-xo-so/mien-bac/14-07-2026.html,2026-07-14T14:16:07.308834+00:00,accepted,,1ee8437b8dbcb650a8c77a77d688be51d8593416b025fdb5b36f8ae8a45d99ac
+2026-07-15,mien-bac,minh-ngoc,https://www.minhngoc.net.vn/ket-qua-xo-so/mien-bac/15-07-2026.html,2026-07-15T14:13:03.755819+00:00,accepted,,e3ac55b05e206c842de2d464a5d17b0ada351ce115ad61aee315ab83752dace5
